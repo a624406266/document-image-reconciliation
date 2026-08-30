@@ -1,4 +1,4 @@
 interface:
   display_name: "单据识别与对账"
   short_description: "三次识别单据并写入Excel，支持PDF对账差异报告"
-  default_prompt: "Use $document-image-reconciliation to extract these document images into my supplied Excel template or the bundled generic template, and reconcile any supplied PDF."
+  default_prompt: "Use $document-image-reconciliation to extract these document images into my supplied Excel template or the bundled Dongguan Chaobang template; ask me for any missing required statement metadata and reconcile any supplied PDF."

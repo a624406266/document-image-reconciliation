@@ -57,6 +57,15 @@ Three-way agreement is required. A field that is visibly blank in all three pass
 
 Do not choose the majority value automatically.
 
+## Required metadata completion gate
+
+For the bundled Dongguan Chaobang template, the following fields must be resolved before writing: supplier name, supplier address, `FM`, supplier `ATTN`, supplier `TEL`, supplier `FAX`, `DATE`, and reconciliation month.
+
+- If the images do not show a field clearly and consistently in all three passes, ask the user for the authoritative value.
+- Consolidate all missing fields into one question when possible.
+- Do not substitute a delivery date for the statement `DATE`, derive the month from the current date, or reuse supplier contact data from an earlier task without explicit user confirmation.
+- If the user says a field is `无` or `不适用`, confirm whether to write `无` or leave the cell blank, then log the decision.
+
 ## Template mapping gate
 
 Before writing:
@@ -67,14 +76,15 @@ Before writing:
 4. identify source fields with no destination and template fields with no source value;
 5. ask the user about any ambiguous mapping.
 
-If no workbook was supplied and the source is compatible with a conventional reconciliation statement, copy the bundled generic template and use [template-mapping.md](template-mapping.md). A supplied workbook takes priority over the bundled template.
+If no workbook was supplied and the requested output is a Dongguan Chaobang supplier statement, copy the bundled template and use [template-mapping.md](template-mapping.md). A supplied workbook takes priority over the bundled template.
 
 Unless requested, do not add columns, merge cells, overwrite formulas, or fill missing source fields from inference. Put unmapped information in the Markdown log.
 
 ## Write and verify
 
 - Work on a new copy, never the supplied original.
-- When using the bundled template, copy `assets/generic-reconciliation-template.xlsx` to the task output directory and write only to that copy.
+- When using the bundled template, copy `assets/供应商名称+x月份对账单-东莞超邦OK（模板）.xlsx` to the task output directory and write only to that copy.
+- Rename the output using the confirmed supplier name and month before writing data. Do not deliver a filename containing `供应商名称`, `x月份`, or `模板`.
 - Write line items only after all source images have passed consensus.
 - Use formulas for derived amounts and totals when compatible with the template.
 - Reconcile each document subtotal and the grand total to the recognized source.

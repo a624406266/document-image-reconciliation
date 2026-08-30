@@ -8,7 +8,9 @@ Include:
 
 - task date and source filenames;
 - target workbook and output workbook filenames;
-- template source and version: user-supplied workbook or bundled generic template;
+- template source and version: user-supplied workbook or bundled Dongguan Chaobang template;
+- required metadata checklist for supplier name, supplier address, `FM`, supplier `ATTN`, supplier `TEL`, supplier `FAX`, `DATE`, and reconciliation month;
+- each required value obtained from the user, including confirmations of `无` or `不适用` and whether the cell was left blank;
 - three-pass consensus status for every image;
 - each mismatch or unreadable field with all three pass values;
 - user confirmations, including the exact confirmed value and confirmation time/order;
