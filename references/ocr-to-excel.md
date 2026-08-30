@@ -67,11 +67,14 @@ Before writing:
 4. identify source fields with no destination and template fields with no source value;
 5. ask the user about any ambiguous mapping.
 
+If no workbook was supplied and the source is compatible with a conventional reconciliation statement, copy the bundled generic template and use [template-mapping.md](template-mapping.md). A supplied workbook takes priority over the bundled template.
+
 Unless requested, do not add columns, merge cells, overwrite formulas, or fill missing source fields from inference. Put unmapped information in the Markdown log.
 
 ## Write and verify
 
 - Work on a new copy, never the supplied original.
+- When using the bundled template, copy `assets/generic-reconciliation-template.xlsx` to the task output directory and write only to that copy.
 - Write line items only after all source images have passed consensus.
 - Use formulas for derived amounts and totals when compatible with the template.
 - Reconcile each document subtotal and the grand total to the recognized source.
